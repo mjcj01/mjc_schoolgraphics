@@ -17,7 +17,8 @@ graph <- ggplot(data, aes(x = fulldate, y = CO2.filled)) +
   geom_line(size = 1.25, color = "#A9D6E5") +
   labs(title = "Carbon Dioxide Concentration Since 1958",
        y = "Carbon Dioxide Concentration (parts per million)",
-       x = "Date") +
+       x = "Date",
+       caption = "Graph created for GEOG 30N Assignment 2, Spring 2022") +
   scale_y_continuous(limits = c(300,420)) +
   scale_x_date(date_labels = "%b %Y") +
   theme_minimal() +
@@ -30,8 +31,9 @@ graph <- ggplot(data, aes(x = fulldate, y = CO2.filled)) +
     axis.title.y = element_text(family = "Roboto Condensed", color = "#FFFFFF", size = 15, 
                               margin = margin(t = 0, r = 15, b = 0, l = 10)),
     axis.title.x = element_text(family = "Roboto Condensed", color = "#FFFFFF", size = 15, 
-                                margin = margin(t = 5, r = 0, b = 10, l = 0)),
-    axis.text = element_text(family = "Roboto Condensed", color = "#FFFFFF")
+                                margin = margin(t = 5, r = 0, b = 0, l = 0)),
+    axis.text = element_text(family = "Roboto Condensed", color = "#A9D6E5"),
+    plot.caption = element_text(family = "Roboto Condensed", color = "#FFFFFF")
   )
 
 graph
